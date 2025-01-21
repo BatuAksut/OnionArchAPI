@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Product:EntityBase
+    public class Product : EntityBase
     {
         public required string Title { get; set; }
         public required string Description { get; set; }
@@ -15,7 +15,10 @@ namespace Domain.Entities
         public required decimal Price { get; set; }
         public required decimal Discount { get; set; }
         public Brand Brand { get; set; }
-        public ICollection<Category> Categories { get;
-        // public string Imagepath { get; set; }
+        public ICollection<Category> Categories
+        {
+            get;
+            // public string Imagepath { get; set; }
+        }
     }
 }
